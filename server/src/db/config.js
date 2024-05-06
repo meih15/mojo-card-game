@@ -1,10 +1,10 @@
 // add your database connection here
 const Sequelize = require('sequelize');
-const path = require('path')
+const path = require('path');
 
-const sequelize = new Sequelize({
+const db = new Sequelize({
     dialect: 'sqlite',
-    storage: path.join(__dirname, 'database.sqlite')
+    storage: path.join(__dirname, 'db.sqlite')
 })
 
-module.exports = { sequelize }
+module.exports = { db, Sequelize }
