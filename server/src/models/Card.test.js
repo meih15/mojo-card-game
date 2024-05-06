@@ -8,7 +8,9 @@ beforeAll(async () => {
   await db.sync({ force: true });
   card = await Card.create({
     name: 'Squirtle',
-    xp: 800,
+    mojo: 100,
+    stamina: 80,
+    imgUrl: "squirtle.img"
   });
 });
 
@@ -23,12 +25,16 @@ describe('Card', () => {
     expect(card.name).toBe('Squirtle');
   });
 
-  it('has an xp property', async () => {
-    expect(card).toHaveProperty('xp');
+  it('has correct mojo', async () => {
+    expect(card.mojo).toBe(100);
   });
 
-  it('has coorect xp', async () => {
-    expect(card.xp).toBe(800);
+  it('has coorect stamina', async () => {
+    expect(card.name).toBe(80);
+  });
+
+  it('has correct image url', async () => {
+    expect(card.imgUrl).toBe('squirtle.img');
   });
 
 });

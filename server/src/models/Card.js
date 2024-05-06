@@ -14,7 +14,7 @@ const Card = db.define('card', {
         type: DataTypes.INTEGER,
         allowNull: true
     },
-    imgURL: {
+    imgUrl: {
         type: DataTypes.STRING,
         allowNull: true
     },
